@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Erschliessungskategorien des Projekts &quot;Urfehdebücher der Stadt Basel&quot;</title>
+        <principal>Susanna Burghartz</principal>
+        <author>Sonia Calvi</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Zentrum für Informationsmodellierung - Universität Graz</publisher>
+        <idno type="PID">o:ufbas.kategorien</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl xml:id="kategorien">
+        <taxonomy xml:id="Urfehdekodierung">
+          <category xml:id="uf_Eintrag"></category>
+          <category xml:id="uf_Eingangsnotiz"></category>
+          <category xml:id="uf_Person">
+            <catDesc>
+              <term>Person</term>
+            </catDesc>
+            <category xml:id="uf_PersonTäter">
+              <catDesc>
+                <term>Täter</term>
+                <gloss>Täter, Tatverdächtiger</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_PersonMittäter">
+              <catDesc>
+                <term>Mittäter</term>
+                <gloss>Mittäter (kann in weiterem Urfehdeverfahren belangt werden), als Mittäter Beschuldigter</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_PersonOpfer">
+              <catDesc>
+                <term>Opfer</term>
+                <gloss>Opfer</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_PersonKläger">
+              <catDesc>
+                <term>Kläger</term>
+                <gloss>Kläger</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_PersonZeuge">
+              <catDesc>
+                <term>Zeuge</term>
+                <gloss>Zeuge</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_PersonAnwesende">
+              <catDesc>
+                <term>Anwesend bei Tat</term>
+                <gloss>Person, die bei der Tat anwesend ist, aber keine Aussage dazu macht</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_PersonHehler">
+              <catDesc>
+                <term>Hehler</term>
+                <gloss>Person, die mit Diebesgut handelt</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_PersonNotar">
+              <catDesc>
+                <term>Notar</term>
+                <gloss>Beglaubigt die Urfehde</gloss>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="uf_male">
+            <catDesc>
+              <term>Mann</term>
+              <gloss>Männlicher Vorname</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_female">
+            <catDesc>
+              <term>Frau</term>
+              <gloss>Weiblicher Vorname</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Beiname">
+            <catDesc>
+              <term>Beiname</term>
+              <gloss>Name, mit dem eine Person von ihrer Umgebung benannt wird</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Beruf">
+            <catDesc>
+              <term>Beruf</term>
+              <gloss>Beruf</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Zivilstand">
+            <catDesc>
+              <term>Zivilstand</term>
+              <gloss>Familienstand (ledig, verheiratet, verwittwet, geschieden)</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Status">
+            <catDesc>
+              <term>Status</term>
+              <gloss>Amt (Rat, Vogt, Meister etc.), akademischer Titel, sonstiger Titel (Majestät, Junker, Herzog etc.), rechtlicher Status (Bürger, Hintersasse, Jude, Zigeuner, ev. Fremder)</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Verwandtschaftsgrad">
+            <catDesc>
+              <term>Verwandtschaftsgrad</term>
+              <gloss>Verwandtschaftsbeziehung einer Person zu einer anderen (Tochter, Enkel, Ehemann, Schwiegersohn/-tochter/-vater/-mutter etc.)</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Ort">
+            <catDesc>
+              <term>Ort</term>
+            </catDesc>
+            <category xml:id="uf_OrtHerkunft">
+              <catDesc>
+                <term>Herkunft</term>
+                <gloss>Herkunftsort</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_OrtWohnort">
+              <catDesc>
+                <term>Wohnort</term>
+                <gloss>Wohnort</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_OrtTatort">
+              <catDesc>
+                <term>Tatort</term>
+                <gloss>Tatort</gloss>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="uf_Vorinstanz">
+            <catDesc>
+              <term>Vorinstanz</term>
+              <gloss>Instanz, die den Fall zuvor behandelt und die Untersuchungshaft der entsprechenden Person veranlasst hat</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_FrüheresUrfehdeverfahren">
+            <catDesc>
+              <term>Früheres Urfehdeverfahren</term>
+              <gloss>Hinweis auf ein vorangegangenes und abgeschlossenes Urfehdeverfahren, in dem die selbe Person belangt wurde</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_AnderesUrfehdeverfahren">
+            <catDesc>
+              <term>Anderes Urfehdeverfahren</term>
+              <gloss>Hinweis auf ein weiteres Urfehdeverfahren einer anderen Person</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Untersuchungshaft">
+            <catDesc>
+              <term>Untersuchungshaft</term>
+              <gloss>Inhaftierung des Täters vor dem Urfehdeeid</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Tat">
+            <catDesc>
+              <term>Tat</term>
+              <gloss>Straftat</gloss>
+            </catDesc>
+            <category xml:id="uf_TatAlkoholmissbrauch">
+              <catDesc>
+                <term>Alkoholmissbrauch</term>
+                <gloss>Übermässiger Alkoholkonsum, Trunkenheit etc.</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatArbeitsverweigerung">
+              <catDesc>
+                <term>Arbeitsverweigerung</term>
+                <gloss>Verweigerung eines Arbeitsauftrages</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatAusdemHausfordern">
+              <catDesc>
+                <term>Aus dem Haus fordern</term>
+                <gloss>Täter fordert Opfer auf, den geschützten Rechtsbereich des Hauses zu verlassen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBewaffneteAuseinandersetzung">
+              <catDesc>
+                <term>Bewaffnete Auseinandersetzung</term>
+                <gloss>Konflikt, in welchem Waffen eingesetzt werden</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBeihilfe">
+              <catDesc>
+                <term>Beihilfe zu XY</term>
+                <gloss>Beihilfe zu einer Straftat (ausgenommen Mord, siehe separate Kategorie)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBeihilfeMord">
+              <catDesc>
+                <term>Beihilfe zu Mord</term>
+                <gloss>Beihilfe zu Mord</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBeleidigungVerleumdung">
+              <catDesc>
+                <term>Beleidigung, Verleumdung</term>
+                <gloss>Beleidigung oder Verleumdung</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBestechung">
+              <catDesc>
+                <term>Bestechung</term>
+                <gloss>Bestechung mit Geld</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBetrug">
+              <catDesc>
+                <term>Betrug</term>
+                <gloss>Betrug im Umgang mit Geld, Preis, Gewicht u.ä.</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBetteln">
+              <catDesc>
+                <term>Betteln</term>
+                <gloss>Betteln</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBöswilligesVerlassen">
+              <catDesc>
+                <term>Böswilliges Verlassen</term>
+                <gloss>Mutwilliges Verlassen der Familie</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBrandstiftung">
+              <catDesc>
+                <term>Brandstiftung</term>
+                <gloss>Brandstiftung</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatBruchEheversprechen">
+              <catDesc>
+                <term>Bruch des Eheversprechens</term>
+                <gloss>Bruch der Verlobung/des Heiratsversprechens</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatDiebstahl">
+              <catDesc>
+                <term>Diebstahl</term>
+                <gloss>Diebstahl von Geld, Sachwerten, Gegenständen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatDrohung">
+              <catDesc>
+                <term>Drohung</term>
+                <gloss>Verbale Bedrohung</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatEhebruch">
+              <catDesc>
+                <term>Ehebruch</term>
+                <gloss>Ehebruch</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatEinbruch">
+              <catDesc>
+                <term>Einbruch</term>
+                <gloss>Einbruch/Einbruchdiebstahl</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatGotteslästerung">
+              <catDesc>
+                <term>Gotteslästerung</term>
+                <gloss>Fluchen, Gotteslästerung</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatHehlerei">
+              <catDesc>
+                <term>Hehlerei</term>
+                <gloss>Handel mit gestohlener Ware</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatInzest">
+              <catDesc>
+                <term>Inzest</term>
+                <gloss>Sexuelle Beziehung mit Verwandten (Eltern, Kinder, Geschwister, Neffen, Nichten etc.)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatKörperverletzung">
+              <catDesc>
+                <term>Körperverletzung</term>
+                <gloss>Mutwillige Verletzung eines anderen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatLeichtfertigkeit">
+              <catDesc>
+                <term>Leichtfertigkeit</term>
+                <gloss>Unmoralisches sexuelles Verhalten (das nicht in eine der anderen Kategorien passt); leichtfertiger, unmoralischer Umgang mit Eheversprechen oder Ehe</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatMord">
+              <catDesc>
+                <term>Mord</term>
+                <gloss>Absichtliche, heimtückische Tötung eines anderen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatMordversuch">
+              <catDesc>
+                <term>Mordversuch</term>
+                <gloss>Versuchte absichtliche, heimtückische Tötung eines anderen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatMüssiggang">
+              <catDesc>
+                <term>Müssiggang</term>
+                <gloss>Unmoralischer (und arbeitsscheuer) Lebenswandel, der nicht auf die Sicherung des eigenen Auskommens gerichtet ist, z.T. in Verbindung mit Vagieren</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatOrdnungsstörung">
+              <catDesc>
+                <term>Ordnungsstörung</term>
+                <gloss>Störung der öffentlichen Ordnung</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatSachbeschädigung">
+              <catDesc>
+                <term>Sachbeschädigung</term>
+                <gloss>Sachbeschädigung (von Gegenständen, Immobilien etc.)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatSchlägerei">
+              <catDesc>
+                <term>Schlägerei</term>
+                <gloss>Körperliche Auseinandersetzung zwischen zwei oder mehr Tätern</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatSchulden">
+              <catDesc>
+                <term>Schulden</term>
+                <gloss>Schulden machen (meist jenseits der eigenen finanziellen Möglichkeiten)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatSelbstmordversuch">
+              <catDesc>
+                <term>Selbstmordversuch</term>
+                <gloss>Selbstmordversuch</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatSpielen">
+              <catDesc>
+                <term>Spielen</term>
+                <gloss>Unerlaubtes (Glücks)Spiel</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatTotschlag">
+              <catDesc>
+                <term>Totschlag</term>
+                <gloss>Tötung eines anderen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatÜbertretungUrfehde">
+              <catDesc>
+                <term>Übertretung Urfehde</term>
+                <gloss>Missachtung eines früheren gegen dieselbe Person ergangenen Urfehdeurteils</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatÜblesHaushalten">
+              <catDesc>
+                <term>Übles Haushalten</term>
+                <gloss>Vernachlässigung des Haushalts und der Familie</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatUnerlaubterKriegsdienst">
+              <catDesc>
+                <term>Unerlaubter Kriegsdienst</term>
+                <gloss>Kriegsdienst trotz explizitem Verbot</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatUngehorsam">
+              <catDesc>
+                <term>Ungehorsam</term>
+                <gloss>Widerstand/Widersetzlichkeit gegen eine konkrete obrigkeitliche Anweisung (ausgenommen frühere Urfehde, siehe separate Kategorie)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatUngetreueAmtsführung">
+              <catDesc>
+                <term>Ungetreue Amtsführung</term>
+                <gloss>Nicht pflichtgemässe Ausführung eines Amtes</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatUnrechtmässigesEheversprechen">
+              <catDesc>
+                <term>Unrechtmässiges Eheversprechen</term>
+                <gloss>Abgabe eines unrechtmässigen Eheversprechens</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatUnterlasseneHilfeleistung">
+              <catDesc>
+                <term>Unterlassene Hilfeleistung</term>
+                <gloss>Unterlassung oder Verweigerung einer Hilfeleistung</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatUnzucht">
+              <catDesc>
+                <term>Unzucht</term>
+                <gloss>Unerlaubte sexuelle Beziehung (ausgenommen Ehebruch bei Verheirateten, siehe separate Kategorie)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatVagieren">
+              <catDesc>
+                <term>Vagieren</term>
+                <gloss>Nichtsesshafte, vagierende Lebensweise</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatVerbaleAuseinandersetzung">
+              <catDesc>
+                <term>Verbale Auseinandersetzung</term>
+                <gloss>Verbaler Streit zwischen zwei oder mehr Tätern</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatVerstossArbeitsvorschriften">
+              <catDesc>
+                <term>Verstoss gegen Arbeitsvorschriften</term>
+                <gloss>Verstösse gegen Arbeitsvorschriften oder Zunftzwänge</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatVeruntreuung">
+              <catDesc>
+                <term>Veruntreuung</term>
+                <gloss>Unterschlagung oder Hinterziehung von Geld</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatVortäuschungFalscherTatsachen">
+              <catDesc>
+                <term>Vortäuschung falscher Tatsachen</term>
+                <gloss>Vortäuschung falscher Tatsachen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatVorteilsnahme">
+              <catDesc>
+                <term>Vorteilsnahme</term>
+                <gloss>Unrechtmässiges Verschaffen eines Vorteils</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatWiedertaeuferei">
+              <catDesc>
+                <term>Wiedertäuferei</term>
+                <gloss>Wiedertäuferei</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatWiderstandgegenObrigkeit">
+              <catDesc>
+                <term>Widerstand gegen Obrigkeit</term>
+                <gloss>Allgemeiner Widerstand gegen Amtsträger/Obrigkeit (kann auch politisch motiviert sein; Widersetzlichkeit gegen konkrete Anweisung wird als Ungehorsam kategorisiert)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatWilderei">
+              <catDesc>
+                <term>Wilderei</term>
+                <gloss>Unrechtmässiges Jagen von Wild</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_TatZechprellerei">
+              <catDesc>
+                <term>Zechprellerei</term>
+                <gloss>Nichtbezahlen der (Wirtshaus)Zeche</gloss>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="uf_Schlagwort">
+            <catDesc>
+              <term>Schlagworte</term>
+            </catDesc>
+            <category xml:id="uf_SchlagwortAndrohungTodesstrafe">
+              <catDesc>
+                <term>Androhung Todesstrafe</term>
+                <gloss>Androhung der Todesstrafe im Falle der Übertretung der Urfehde (ausgenommen Hinrichtungen mit Schwert oder durch Ertränken, siehe seperate Kategorien)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortArmut">
+              <catDesc>
+                <term>Armut</term>
+                <gloss>Arme, Armut</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortAufdenHalswachsen">
+              <catDesc>
+                <term>Auf den Hals wachsen</term>
+                <gloss>Androhung einer Leibesstrafe</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortAuffällig">
+              <catDesc>
+                <term>Auffällig</term>
+                <gloss>Allgemeiner Hinweis auf einen interessanten oder auffälligen Sachverhalt</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortBannherren">
+              <catDesc>
+                <term>Bannherren</term>
+                <gloss>Hinweis auf Mitglieder der Banngerichte</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortBehinderung">       
+       <catDesc>
+                <term>Behinderung</term>
+                <gloss>Hinweis auf eine behinderte Person</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortBettelvogt">
+              <catDesc>
+                <term>Bettelvogt</term>
+                <gloss>Hinweis auf den Bettelvogt (zuständig für die auswärtigen Bettler)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortBettler">
+              <catDesc>
+                <term>Bettler</term>
+                <gloss>Betteln, Bettler</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortBlutvogt">
+              <catDesc>
+                <term>Blutvogt</term>
+                <gloss>Hinweis auf den Blutvogt</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortBürgerrecht">
+              <catDesc>
+                <term>Bürgerrecht</term>
+                <gloss>Hinweis auf Bürgerrechtsfragen/-verfahren (z.B. Einbürgerung)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortBürgermeister">
+              <catDesc>
+                <term>Bürgermeister</term>
+                <gloss>Hinweis auf die Bürgermeister</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortDienstmagd">
+              <catDesc>
+                <term>Dienstmagd</term>
+                <gloss>Dienstmagd</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortEhegerichtEherichter">
+              <catDesc>
+                <term>Ehegericht, Eherichter</term>
+                <gloss>Hinweis auf Ehegericht/Eherichter</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortErbstreit">
+              <catDesc>
+                <term>Erbstreit</term>
+                <gloss>Streit um Erbe</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortErtränken">
+              <catDesc>
+                <term>Ertränken</term>
+                <gloss>Hinweis auf Bestrafung durch Ertränken</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortFoltern">
+              <catDesc>
+                <term>Foltern</term>
+                <gloss>Hinweis auf Folterung (meist vor dem Urfehdeeid)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortFühren">
+              <catDesc>
+                <term>Führen</term>
+                <gloss>Hinweis auf Bestrafung durch Führen (meist gefesselt, galt als ehrenrührig)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortFrauenarbeit">
+              <catDesc>
+                <term>Frauenarbeit</term>
+                <gloss>Hinweis auf gewerbliche, spezifische Frauenarbeit</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortGefängnis">
+              <catDesc>
+                <term>Gefängnis</term>
+                <gloss>Hinweis auf ein bestimmtes Gefängnis/Haftlokal</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortGeldleihe">
+              <catDesc>
+                <term>Geldleihe</term>
+                <gloss>Geldleihe (meist im Kontext mit Juden erwähnt)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortHalseisen">
+              <catDesc>
+                <term>Halseisen</term>
+                <gloss>Hinweis auf Bestrafung mit Halseisen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortJuden">
+              <catDesc>
+                <term>Juden</term>
+                <gloss>Erwähnung von Juden</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortKeinGeständnis">
+              <catDesc>
+                <term>Kein Geständnis</term>
+                <gloss>Fall, in dem explizit kein Geständnis abgelegt wird</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortHeimlicheHerren">
+              <catDesc>
+                <term>Heimliche Herren</term>
+                <gloss>Erwähnung der Heimlichen Herren</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortKnecht">
+              <catDesc>
+                <term>Knecht</term>
+                <gloss>Knecht (analog zu Dienstmagd)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortLadenherren">
+              <catDesc>
+                <term>Ladenherren</term>
+                <gloss>Erwähnung der Ladenherren</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortLohnVerdienst">
+              <catDesc>
+                <term>Lohn, Verdienst</term>
+                <gloss>Angaben zu Lohn oder Verdienst</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortLonherren">
+              <catDesc>
+                <term>Lonherren</term>
+                <gloss>Erwähnung der Lonherren</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortMeerwunder">
+              <catDesc>
+                <term>Meerwunder</term>
+                <gloss>Erwähnung eines Meerwunders</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortMeineid">
+              <catDesc>
+                <term>Meineid</term>
+                <gloss>Hinweis auf einen Meineid</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortMitgift">
+              <catDesc>
+                <term>Mitgift</term>
+                <gloss>Angaben zu Mitgift</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortNachbar">
+              <catDesc>
+                <term>Nachbar</term>
+                <gloss>Hinweis auf Nachbarn</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortObersterKnecht">
+              <catDesc>
+                <term>Oberster Knecht</term>
+                <gloss>Erwähnung des Obersten Knechts</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortProstitution">
+              <catDesc>
+                <term>Prostitution</term>
+                <gloss>Hinweis auf Prostitution</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortRat">
+              <catDesc>
+                <term>Rat</term>
+                <gloss>Erwähnung des (Kleinen) Rats, eines spezifischen Ratsherrn</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortRatsknecht">
+              <catDesc>
+                <term>Ratsknecht</term>
+                <gloss>Erwähnung eines Ratsknechts</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortRuten">
+              <catDesc>
+                <term>Ruten</term>
+                <gloss>Hinweis auf Bestrafung mit Ruten</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSchulden">
+              <catDesc>
+                <term>Schulden</term>
+                <gloss>Hinweis auf Schulden (die nicht als Tatbestand verfolgt werden)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSchultheiss">
+              <catDesc>
+                <term>Schultheiss</term>
+                <gloss>Hinweis auf einen Schultheiss</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSchwemmen">
+              <catDesc>
+                <term>Schwemmen</term>
+                <gloss>Hinweis auf Bestrafung durch Schwemmen</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSchwert">
+              <catDesc>
+                <term>Schwert</term>
+                <gloss>Hinweis auf Todesstrafe durch Schwert</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSiebnerherren">
+              <catDesc>
+                <term>Siebnerherren</term>
+                <gloss>Hinweis auf die Verhörrichter (Siebnerherren)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSiegelbrief">
+              <catDesc>
+                <term>Siegelbrief</term>
+                <gloss>Erwähnung eines besiegelten Briefes/Urkunde</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSpinnen">
+              <catDesc>
+                <term>Spinnen</term>
+                <gloss>Hinweis auf die Tätigkeit des Spinnens (spezifische Unterschichtsfrauenarbeit)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortSpital">
+              <catDesc>
+                <term>Spital</term>
+                <gloss>Hinweis auf das Spital (Alters- und Armenversorgung)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortStadtgericht">
+              <catDesc>
+                <term>Stadtgericht</term>
+                <gloss>Hinweis auf das Stadtgericht (= andere Gerichtsinstanz)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortStadtknecht">
+              <catDesc>
+                <term>Stadtknecht</term>
+                <gloss>Hinweis auf einen Stadtknecht</gloss>
+                
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortStadtwechsel">
+              <catDesc>
+                <term>Stadtwechsel</term>
+                <gloss>Hinweis auf den Stadtwechsel (städtische Bank)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortUnehelichesKind">
+              <catDesc>
+                <term>UnehelichesKind</term>
+                <gloss>Hinweis auf ein uneheliches Kind (= ehrenrührig)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortUnschuldig">
+              <catDesc>
+                <term>Unschuldig</term>
+                <gloss>Explizite Feststellung der Unschuld im Urfehdeverfahren</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortWelsche">
+              <catDesc>
+                <term>Welsche</term>
+                <gloss>Hinweis auf Fremde, meist italienischer oder französischer Herkunft</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortWirtshaus">
+              <catDesc>
+                <term>Wirtshaus</term>
+                <gloss>Wirtshaus (Wirtshäuser spielen als Kommunikationsorte eine grosse Rolle)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortZoll">
+              <catDesc>
+                <term>Zoll</term>
+                <gloss>Zoll/Zollstelle</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_SchlagwortZunft">
+              <catDesc>
+                <term>Zunft</term>
+                <gloss>Hinweise im Zusammenhang mit Zünften</gloss>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="uf_Urfehdeeid">
+            <catDesc>
+              <term>Urfehdeeid</term>
+              <gloss>Erwähnung des Urfehdeeides</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="uf_Strafe">
+            <catDesc>
+              <term>Strafe</term>
+              <gloss>Alles, was im Urfehdeeid als Urteil oder Strafe festgelegt wird</gloss>
+            </catDesc>
+            <category xml:id="uf_StrafeAmtsentlassung">
+              <catDesc>
+                <term>Amtsentlassung</term>
+                <gloss>Entlassung aus einem Amt</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeAusweisung">
+              <catDesc>
+                <term>Ausweisung</term>
+                <gloss>Verbannung aus einem bestimmten Gebiet (meist Stadt Basel oder Basler Herrschaftsgebiet)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeEntschädigungRückzahlung">
+              <catDesc>
+                <term>Entschädigung, Rückzahlung</term>
+                <gloss>Entschädigungszahlung/Rückzahlung von Schulden</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeEntschuldigung">
+              <catDesc>
+                <term>Entschuldigung</term>
+                <gloss>Öffentliche oder persönliche Entschuldigung beim Opfer</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeErmahnung">
+              <catDesc>
+                <term>Ermahnung</term>
+                <gloss>Ermahnung betreffend zukünftigem Verhaltens</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeGefängnis">
+              <catDesc>
+                <term>Gefängnisstrafe</term>
+                <gloss>Absitzen einer Gefängnisstrafe nach dem Urfehdeeid</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeGeldstrafe">
+              <catDesc>
+                <term>Geldstrafe</term>
+                <gloss>Zahlung einer Geldstrafe an die Obrigkeit</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeHausarrest">
+              <catDesc>
+                <term>Hausarrest</term>
+                <gloss>Hausarrest</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeKörperstrafe">
+              <catDesc>
+                <term>Körperstrafe</term>
+                <gloss>Körperliche Bestrafung</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeStrafandrohung">
+              <catDesc>
+                <term>Strafandrohung</term>
+                <gloss>Strafe, die im Falle einer Übertretung der Urfehde angedroht wird</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeAusnahme">
+              <catDesc>
+                <term>Strafausnahme</term>
+                <gloss>Einschränkungen und Bedingungen für Gültigkeit/Anwendung der Strafe</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeMilderung">
+              <catDesc>
+                <term>Strafmilderung</term>
+                <gloss>Umstände, die zu einer mildernden Strafe führen (z.B. Alter, Fürbitten etc.)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeStrafumwandlung">
+              <catDesc>
+                <term>Strafumwandlung</term>
+                <gloss>Umwandlung einer Strafe in eine andere (meist Geld in Haft)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeUrteilohneStrafe">
+              <catDesc>
+                <term>Urteil ohne Strafe</term>
+                <gloss>Urteil, das keine Strafe beinhaltet</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeVerbot">
+              <catDesc>
+                <term>Verbot</term>
+                <gloss>Verbote aller Art (ausgenommen Spielverbot, Tanzverbot, Waffenverbot und Wirtshausverbot, siehe separate Kategorien)</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeVerbotSpiel">
+              <catDesc>
+                <term>Spielverbot</term>
+                <gloss>Verbot des unrechtmässigen (Glück)Spiels</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeVerbotTanz">
+              <catDesc>
+                <term>Tanzverbot</term>
+                <gloss>Verbot des Tanzens</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeVerbotWaffen">
+              <catDesc>
+                <term>Waffenverbot</term>
+                <gloss>Verbot des Waffentragens</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeVerbotWirtshaus">
+              <catDesc>
+                <term>Wirtshausverbot</term>
+                <gloss>Verbot des Wirtshausbesuches</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeWeisungananderesGericht">
+              <catDesc>
+                <term>Weisung an anderes Gericht</term>
+                <gloss>Urteil, das den behandelten Fall an ein anderes Gericht verweist</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_StrafeWiedergutmachung">
+              <catDesc>
+                <term>Wiedergutmachung</term>
+                <gloss>Wiedergutmachung am Opfer (ausgenommen Entschädigungszahlung/Rückzahlung, siehe separate Katergorie)</gloss>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="uf_Datum">
+            <catDesc>
+              <term>Datum</term>
+            </catDesc>
+            <category xml:id="uf_DatumTat">
+              <catDesc>
+                <term>Datum der Tat</term>
+                <gloss>Zeitpunkt, zu welchem die Tat verübt wurde</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_DatumUrfehde">
+              <catDesc>
+                <term>Datum der Urfehde</term>
+                <gloss>Zeitpunkt, zu welchem die Urfehde geschworen wurde</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_DatumFrist">
+              <catDesc>
+                <term>Datum einer Frist</term>
+                <gloss>Dauer oder Ablaufdatum einer Frist</gloss>
+              </catDesc>
+            </category>
+            <category xml:id="uf_DatumBegnadigung">
+              <catDesc>
+                <term>Datum der Begnadigung</term>
+                <gloss>Zeitpunkt, zu welchem eine Person begnadigt wurde</gloss>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="uf_NotarialSubscription">
+            <catDesc>
+              <term>Notariatsunterschrift</term>
+              <gloss>Beglaubigung der Urfehde durch den Notar</gloss>
+            </catDesc>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:space="preserve">
+    <body>
+      <head>Erschliessungskategorien der Urfehdebücher der Stadt Basel</head>
+      <p>Dieses Dokument enthält die Kategorien, mit denen die Urfehdebücher näher erschlossen werden. Wählen Sie eine Kategorie aus, um alle Einträge zu sehen, in denen diese Kategorie verwendet wird.</p>
+    </body>
+  </text>
+</TEI>

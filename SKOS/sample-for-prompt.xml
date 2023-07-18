@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+	<skos:ConceptScheme rdf:about="https://gams.uni-graz.at/o:ufbas.categories">
+		<skos:hasTopConcept rdf:resource="https://gams.uni-graz.at/o:ufbas.categories#Person"/>
+	</skos:ConceptScheme>
+	<skos:Concept rdf:about="https://gams.uni-graz.at/o:ufbas.categories#Person">
+		<skos:prefLabel xml:lang="de">Person</skos:prefLabel>
+		<skos:prefLabel xml:lang="en">Person</skos:prefLabel>
+		<skos:inScheme rdf:resource="https://gams.uni-graz.at/o:ufbas.categories"/>
+		<skos:narrower rdf:resource="https://gams.uni-graz.at/o:ufbas.categories#Accomplice"/>
+		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q215627"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="https://gams.uni-graz.at/o:ufbas.categories#Accomplice">
+		<skos:prefLabel xml:lang="de">Mittäter</skos:prefLabel>
+		<skos:prefLabel xml:lang="en">Accomplice</skos:prefLabel>
+		<skos:definition xml:lang="de">Mittäter (kann in weiterem Urfehdeverfahren belangt werden), als Mittäter Beschuldigter</skos:definition>
+		<skos:definition xml:lang="en">Accomplice (can be prosecuted in further original complaint proceedings), accused as accomplice</skos:definition>.
+		<skos:inScheme rdf:resource="https://gams.uni-graz.at/o:ufbas.categories"/>
+		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q706884"/>
+	</skos:Concept>
+</rdf:RDF>
