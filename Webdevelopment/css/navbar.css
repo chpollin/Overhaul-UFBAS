@@ -1,0 +1,127 @@
+/*Farbschema fÃ¼r Navbar:*/
+
+.navbar-default {
+  background-color: #475862;
+  
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  font-weight:bold;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff; 
+}
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: #999999;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #999999;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #999999;
+}
+.navbar-default .navbar-toggle {
+  border-color: #999999;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #999999;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #999999;
+  }  
+}
+
+ /*Eckige Searchbox:*/
+ nav#nav .input-group .form-control {
+     border-radius:0;
+ }
+ nav#nav .input-group-btn>.btn{
+     border-radius:0;
+ }
+ 
+/* Eckige Navbar*/
+.navbar{
+    border-radius:0;
+}
+
+/*Anpassung padding*/
+/*.navbar > div.container:first-child{
+    padding-left:10px;
+    padding-right:10px;
+}*/
+.navbar{
+    border:none;
+}
+
+/*Responsive Navbar (Klasse hidden-lg etc.) Dadurch:*/
+.navbar-collapse{
+    padding-left:0;
+}
+form.navbar-form.navbar-right{
+    margin-left: 0;
+}
+
+ul.nav.navbar-nav{
+    margin:0;
+}
+
+/*Sticky Navbar*/
+#nav {
+  width: 100%;
+  position:static;
+}
+
+#nav.affix {
+   position: fixed;
+   top: 0;
+   z-index:10;
+   -webkit-transition: all .6s ease-in-out;
+}
+
+/*Searchbox stylish*/
+.stylish-input-group .input-group-addon{
+    background: white !important;
+    border-left:none;
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
