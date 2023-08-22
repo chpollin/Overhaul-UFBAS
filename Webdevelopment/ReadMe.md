@@ -1,12 +1,18 @@
 # GPT-supported Project Rehaul and Refactoring
 Eine Fallstudie zur Überarbeitung und Erweiterung des Projekts ‘Urfehdebücher der Stadt Basel - digitale Edition’ (UFBAS) durch generative KI und LLM
 
-# 1. Iteration
-
 ## Analysing HTML with ChatGPT-4 Code Interpreter
 
-* UFBAS - WebDev Analysis. August 2023. ChatGPT August 3 Version. https://chat.openai.com/share/a4d884a4-1cb5-4914-bdc1-e9a72b2f48b9. 
+* UFBAS - WebDev Analysis. August 2023. ChatGPT August 3 Version. https://chat.openai.com/share/a4d884a4-1cb5-4914-bdc1-e9a72b2f48b9.
+* UFBAS - WebDev Analysis 2. August 2023. ChatGPT August 3 Version. https://chat.openai.com/share/01001b99-5e8e-491d-ab63-fc5c1fdafd7d 
+
+### Findings
+
 * chatGPT-4 does a good job of giving you an overview of multiple files (a whole web project). It analyses and describes each file.
+* There are problems with XSLT analysis. 
+* Too many files and too long files seem to be too complex.
+* Limited to a maximum of 10 files.
+* Can be used as a developer to get an overview of someone else's code.
 
 ### Initial Prompt
 
