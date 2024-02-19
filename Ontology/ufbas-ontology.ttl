@@ -1,0 +1,566 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uf: <https://gams.uni-graz.at/o:ufbas.ontology#> .
+
+uf:Person rdf:type rdfs:Class ;
+    rdfs:comment "Represents individuals involved in the legal documents, including offenders, victims, witnesses, etc."@en ;
+    rdfs:label "Person"@en .
+
+uf:Location rdf:type rdfs:Class ;
+    rdfs:comment "Geographical locations relevant to the legal documents, such as crime scenes, residences, and places of origin."@en ;
+    rdfs:label "Location"@en .
+
+uf:LegalConcept rdf:type rdfs:Class ;
+    rdfs:comment "Abstract concepts and entities related to the legal process, including legal procedures and statuses."@en ;
+    rdfs:label "Legal Concept"@en .
+
+uf:Offense rdf:type rdfs:Class ;
+    rdfs:comment "Categorization of offenses documented within the legal texts, structured into specific types of criminal acts."@en ;
+    rdfs:label "Offense"@en .
+
+uf:Keyword rdf:type rdfs:Class ;
+    rdfs:comment "Keywords or tags associated with entries in the legal documents, providing contextual and thematic information."@en ;
+    rdfs:label "Keyword"@en .
+
+uf:Punishment rdf:type rdfs:Class ;
+    rdfs:comment "Types of punishments specified within the legal documents, ranging from monetary fines to physical penalties."@en ;
+    rdfs:label "Punishment"@en .
+
+uf:DateCategory rdf:type rdfs:Class ;
+    rdfs:comment "Date-related information such as the date of the offense, date of oath, deadlines, and pardons."@en ;
+    rdfs:label "Date Category"@en .
+
+uf:NotarialAuthentication rdf:type rdfs:Class ;
+    rdfs:comment "Authentication process by a notary, confirming the validity of the documents and entries."@en ;
+    rdfs:label "Notarial Authentication"@en .
+
+uf:hasRole rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Defines the role of a person within the context of the legal document, such as offender, witness, etc."@en ;
+    rdfs:label "Has Role"@en .
+
+uf:isCitizenOf rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Location ;
+    rdfs:comment "Indicates the citizenship of a person within a specific location or jurisdiction."@en ;
+    rdfs:label "Is Citizen Of"@en .
+
+uf:worksAt rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Location ;
+    rdfs:comment "Specifies the workplace or location where the person is employed or conducts their trade."@en ;
+    rdfs:label "Works At"@en .
+
+uf:associatedWithKeyword rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Keyword ;
+    rdfs:comment "Associates a person with thematic or contextual keywords derived from legal documents."@en ;
+    rdfs:label "Associated with Keyword"@en .
+
+uf:borrowsFrom rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Person ;
+    rdfs:comment "Defines the borrowing relationship between two persons."@en ;
+    rdfs:label "Borrows From"@en .
+
+uf:lendsTo rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Person ;
+    rdfs:comment "Defines the lending relationship between two persons."@en ;
+    rdfs:label "Lends To"@en .
+
+uf:residesIn rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Location ;
+    rdfs:comment "Indicates the residence location of a person."@en ;
+    rdfs:label "Resides In"@en .
+
+uf:gender rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Specifies the gender of a person."@en ;
+    rdfs:label "Gender"@en .
+
+uf:nickname rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "A nickname or alias used by the community to refer to the person."@en ;
+    rdfs:label "Nickname"@en .
+
+uf:profession rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The profession or trade practiced by the person."@en ;
+    rdfs:label "Profession"@en .
+
+ uf:receivesPunishment rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Punishment ;
+    rdfs:comment "Links a person to the punishment that they have been sentenced to as a result of legal proceedings."@en ;
+    rdfs:label "Receives Punishment"@en .   
+
+uf:civilStatus rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Marital status of the person."@en ;
+    rdfs:label "Civil Status"@en .
+
+uf:status rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Occupational, academic titles, and legal status of the person."@en ;
+    rdfs:label "Status"@en .
+
+uf:degreeOfKinship rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Specifies the family relationships or degree of kinship of a person."@en ;
+    rdfs:label "Degree of Kinship"@en .
+
+uf:commitsOffense rdf:type rdf:Property ;
+    rdfs:domain uf:Person ;
+    rdfs:range uf:Offense ;
+    rdfs:comment "Links an offender to the specific offense they committed."@en ;
+    rdfs:label "Commits Offense"@en .
+
+uf:uf_DatumTat rdf:type rdf:Property ;
+    rdfs:domain uf:Offense ;
+    rdfs:range uf:DateCategory ;
+    rdfs:comment "Specifies the date when the offense was committed."@en ;
+    rdfs:label "Date of Offense"@en .
+
+uf:uf_DatumUrfehde rdf:type rdf:Property ;
+    rdfs:domain uf:LegalConcept ;
+    rdfs:range uf:DateCategory ;
+    rdfs:comment "Indicates the date when the oath of peace was sworn."@en ;
+    rdfs:label "Date of Oath of Peace"@en .
+
+uf:uf_DatumFrist rdf:type rdf:Property ;
+    rdfs:domain uf:LegalConcept, uf:Punishment ;
+    rdfs:range uf:DateCategory ;
+    rdfs:comment "Specifies a deadline date related to legal proceedings or fulfillment of a punishment."@en ;
+    rdfs:label "Deadline Date"@en .
+
+uf:uf_DatumBegnadigung rdf:type rdf:Property ;
+    rdfs:domain uf:LegalConcept ;
+    rdfs:range uf:DateCategory ;
+    rdfs:comment "Date when a pardon was granted."@en ;
+    rdfs:label "Date of Pardon"@en .
+
+uf:uf_NotarialSubscription rdf:type rdf:Property ;
+    rdfs:domain uf:LegalConcept ;
+    rdfs:range uf:NotarialAuthentication ;
+    rdfs:comment "Associates a legal document or entry with its notarized authentication."@en ;
+    rdfs:label "Notarial Subscription"@en .
+
+uf:PlaceOfOrigin rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Location ;
+    rdfs:label "Place of Origin"@en ;
+    rdfs:comment "Specifies the geographical origin of a person, which may influence legal jurisdiction or social standing."@en .
+
+uf:Residence rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Location ;
+    rdfs:label "Residence"@en ;
+    rdfs:comment "Indicates the current living location of a person, relevant for legal jurisdictions and societal interactions."@en .
+
+uf:CrimeScene rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Location ;
+    rdfs:label "Crime Scene"@en ;
+    rdfs:comment "Denotes the specific location where an offense took place, crucial for legal investigations and proceedings."@en .
+
+uf:PrecedingInstance rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:LegalConcept ;
+    rdfs:label "Preceding Instance"@en ;
+    rdfs:comment "Refers to any legal bodies or authorities that previously managed a case, providing context for current proceedings."@en .
+
+uf:PreviousOathOfPeaceProcedure rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:LegalConcept ;
+    rdfs:label "Previous Oath of Peace Procedure"@en ;
+    rdfs:comment "Documents any past oath of peace processes involving the same parties, indicating recurring legal interactions or disputes."@en .
+
+uf:OtherOathOfPeaceProcedure rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:LegalConcept ;
+    rdfs:label "Other Oath of Peace Procedure"@en ;
+    rdfs:comment "Points to oath of peace procedures involving related or third-party individuals, highlighting broader legal networks or conflicts."@en .
+
+uf:PretrialDetention rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:LegalConcept ;
+    rdfs:label "Pretrial Detention"@en ;
+    rdfs:comment "Signifies the period of incarceration prior to a trial or oath, reflecting on the legal process and the severity of the offense."@en .
+
+uf:Offense rdf:type rdfs:Class ;
+    rdfs:label "Offense"@en ;
+    rdfs:comment "A broad category encompassing various types of criminal acts documented in the legal texts, serving as a basis for legal categorization and analysis."@en .
+
+uf:BruchDesEheversprechens rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Breach of Engagement or Marriage Promise"@en .
+
+uf:Diebstahl rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Theft"@en .
+
+uf:Drohung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Verbal Threat"@en .
+
+uf:Ehebruch rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Adultery"@en .
+
+uf:Einbruch rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Burglary"@en .
+
+uf:Gotteslaesterung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Blasphemy"@en .
+
+uf:Hehlerei rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Trading in Stolen Goods"@en .
+
+uf:Inzest rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Incest"@en .
+
+uf:Koerperverletzung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Willful Injury"@en .
+
+uf:Muessiggang rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Immoral, Work-shy Lifestyle"@en .
+
+uf:Ordnungsstoerung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Disturbance of Public Order"@en .
+
+uf:Sachbeschaedigung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Damage to Property"@en .
+
+uf:Schlaegerei rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Physical Altercation"@en .
+
+uf:Schulden rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Incurring Debts Beyond Means"@en .
+
+uf:Selbstmordversuch rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Suicide Attempt"@en .
+
+uf:Spielen rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Illegal Gambling"@en .
+
+uf:Totschlag rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Killing of Another Person"@en .
+
+uf:UebertretungUrfehde rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Violation of a Previous Oath of Peace Judgment"@en .
+
+uf:UeblesHaushalten rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Neglect of Household and Family"@en .
+
+uf:UnerlaubterKriegsdienst rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Unauthorized Military Service"@en .
+
+uf:Ungehorsam rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Disobedience"@en .
+
+uf:UngetreueAmtsfuehrung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Non-compliant Execution of an Office"@en .
+
+uf:UnrechtmaessigesEheversprechen rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Unlawful Marriage Promise"@en .
+
+uf:UnterlasseneHilfeleistung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Failure to Provide Assistance"@en .
+
+uf:Unzucht rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Illicit Sexual Relationship"@en .
+
+uf:Vagieren rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Non-sedentary Lifestyle"@en .
+
+uf:VerbaleAuseinandersetzung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Verbal Dispute"@en .
+
+uf:VerstossGegenArbeitsvorschriften rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Violations of Work Regulations"@en .
+
+uf:Veruntreuung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Embezzlement"@en .
+
+uf:VortaeuschungFalscherTatsachen rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Pretense of False Facts"@en .
+
+uf:Vorteilsnahme rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Illicitly Obtaining a Benefit"@en .
+
+uf:Wiedertaeuferei rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Anabaptism"@en .
+
+uf:WiderstandGegenObrigkeit rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Resistance Against Authority"@en .
+
+uf:Wilderei rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Illegal Hunting"@en .
+
+uf:Zechprellerei rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Offense ;
+    rdfs:label "Failure to Pay the Tavern Bill"@en .
+
+uf:Keyword  rdf:type rdfs:Class ;
+    rdfs:label "Keyword"@en ;
+    rdfs:comment "Represents thematic or contextual tags associated with legal documents, serving to categorize and highlight specific aspects or themes of interest."@en .
+
+uf:AndrohungTodesstrafe rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Threat of Capital Punishment"@en ;
+    rdfs:comment "Indicates cases where capital punishment is mentioned as a potential penalty."@en .
+
+uf:Armut rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Poverty"@en ;
+    rdfs:comment "References to economic hardship or poverty within the context of legal documents."@en .
+
+uf:AufDenHalsWachsen rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Threat of Corporal Punishment"@en ;
+    rdfs:comment "Denotes instances where corporal punishment is threatened or implied as a consequence."@en .
+
+uf:Auffaellig rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Notable or Interesting Facts"@en ;
+    rdfs:comment "Marks entries containing particularly notable or remarkable information or events."@en .
+
+uf:Bannherren rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Members of the Ban Courts"@en ;
+    rdfs:comment "References to individuals who are part of the ban courts, a judicial body dealing with banishment and other penalties."@en .
+
+uf:Behinderung rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Reference to a Disabled Person"@en ;
+    rdfs:comment "Indicates documents mentioning disabled individuals, potentially in the context of legal rights or considerations."@en .
+
+uf:Bettelvogt rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Overseer for External Beggars"@en ;
+    rdfs:comment "Refers to the role of overseeing external beggars, a position within municipal or local governance structures."@en .
+
+uf:Bettler rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Begging, Beggars"@en ;
+    rdfs:comment "Tags entries that discuss or mention beggars and the act of begging, reflecting social and economic issues."@en .
+
+uf:Blutvogt rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Reference to the Executioner"@en ;
+    rdfs:comment "Mentions of executioners, also known as 'Blutvogt', within the context of capital punishment or execution duties."@en .
+
+uf:Buergerrecht rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Citizenship Issues or Processes"@en ;
+    rdfs:comment "Concerns the legal processes, rights, or disputes related to citizenship status."@en .
+
+uf:Buergermeister rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "References to Mayors"@en ;
+    rdfs:comment "Involves mentions of mayors, highlighting their roles in legal decisions, governance, or in the context of legal documents."@en .
+
+uf:Dienstmagd rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Maid-Servant"@en ;
+    rdfs:comment "References to maid-servants, often in the context of labor, social status, or legal matters concerning domestic workers."@en .
+
+uf:EhegerichtEherichter rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "References to the Marriage Court or Judges"@en ;
+    rdfs:comment "Pertains to legal proceedings or decisions made by marriage courts or judges, reflecting the legal aspects of matrimonial issues."@en .
+
+uf:Erbstreit rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Inheritance Disputes"@en ;
+    rdfs:comment "Tags documents involving disputes over inheritance, highlighting legal battles concerning the distribution of assets among heirs."@en .
+
+uf:Ertraenken rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Punishment by Drowning"@en ;
+    rdfs:comment "Specifically denotes cases where drowning is used or mentioned as a form of capital punishment."@en .
+
+uf:Foltern rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "References to Torture"@en ;
+    rdfs:comment "Indicates legal documents that mention the use of torture, either as a punitive measure or as a means of extraction of information."@en .
+
+uf:Fuehren rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Punishment by Leading"@en ;
+    rdfs:comment "Refers to the punishment involving leading the condemned individual through public spaces, often as a form of humiliation or public admonition."@en .
+
+uf:Frauenarbeit rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "References to Women's Work"@en ;
+    rdfs:comment "Tags entries discussing or mentioning the labor and roles of women, particularly in lower-class or domestic settings."@en .
+
+uf:Gefaengnis rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "References to a Specific Prison or Holding Location"@en ;
+    rdfs:comment "Mentions specific prisons or holding locations, relevant in the context of legal sentencing, detainment, or descriptions of penal facilities."@en .
+
+uf:Spital rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Reference to the Hospital"@en ;
+    rdfs:comment "Mentions or references to hospitals, often in contexts related to care for the sick, poor, or injured within legal documents."@en .
+
+uf:Stadtgericht rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Reference to the City Court"@en ;
+    rdfs:comment "References to city courts, indicating legal proceedings or judgments at a municipal level."@en .
+
+uf:Stadtknecht rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Mention of a City Servant"@en ;
+    rdfs:comment "Refers to employees or officials serving in a city's administration, often in the context of law enforcement or public order."@en .
+
+uf:Stadtwechsel rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Reference to the City Exchange (Bank)"@en ;
+    rdfs:comment "Mentions of city exchanges or banks, highlighting their role in financial transactions or legal disputes related to finance."@en .
+
+uf:UnehelichesKind rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Reference to an Illegitimate Child"@en ;
+    rdfs:comment "Documents cases or legal matters involving children born out of wedlock, with implications for inheritance, custody, or social status."@en .
+
+uf:Unschuldig rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Explicit Determination of Innocence"@en ;
+    rdfs:comment "Tags legal decisions or records where an individual's innocence is explicitly stated or proven, often relevant in acquittal cases."@en .
+
+uf:Welsche rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Reference to Foreigners"@en ;
+    rdfs:comment "Indicates references to foreigners, potentially highlighting issues of citizenship, legal rights, or cross-cultural interactions."@en .
+
+uf:Wirtshaus rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Taverns as Communication Hubs"@en ;
+    rdfs:comment "Points to the social and legal significance of taverns, not just as places of hospitality but also as centers for news, trade, and meetings."@en .
+
+uf:Zoll rdf:type rdfs:Class ; rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Toll"@en ;
+    rdfs:comment "References to tolls, often related to trade, transportation, and legal regulations governing them."@en .
+
+uf:Zunft rdf:type rdfs:Class ; 
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "References Related to Guilds"@en ;
+    rdfs:comment "Mentions of guilds, highlighting their roles in regulation of trades, crafts, and their involvement in legal or social matters."@en .
+
+uf:Punishment rdf:type rdfs:Class ;
+    rdfs:label "Punishment"@en ;
+    rdfs:comment "General category for various forms of legal penalties and sanctions."@en .
+
+uf:StrafeAmtsentlassung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Dismissal from Office"@en ;
+    rdfs:comment "Punishment resulting in the removal from an official position or duty."@en .
+
+uf:StrafeAusweisung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Banishment from a Specific Area"@en ;
+    rdfs:comment "Forced removal of a person from a city, region, or country as a form of punishment."@en .
+
+uf:StrafeEntschaedigungRueckzahlung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Compensation, Repayment of Debts"@en ;
+    rdfs:comment "Requirement to pay restitution or repay debts as part of a legal judgment."@en .
+
+uf:StrafeEntschuldigung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Public or Personal Apology to the Victim"@en ;
+    rdfs:comment "Legal mandate for the offender to issue an apology to the victim or publicly."@en .
+
+uf:StrafeErmahnung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Warning Regarding Future Behavior"@en ;
+    rdfs:comment "Formal caution against repeating unlawful actions, often without immediate physical punishment."@en .
+
+uf:StrafeGefaengnis rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Prison Sentence Post-oath"@en ;
+    rdfs:comment "Incarceration following a legal oath, as a consequence of violating its terms or for a criminal act."@en .
+
+uf:StrafeGeldstrafe rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Monetary Fine Payable to Authorities"@en ;
+    rdfs:comment "Financial penalty imposed by a court as punishment for an offense."@en .
+
+uf:StrafeHausarrest rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "House Arrest"@en ;
+    rdfs:comment "Confinement of an individual to their residence as a form of punishment."@en .
+
+uf:StrafeKoerperstrafe rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Physical Punishment"@en ;
+    rdfs:comment "Use of physical force as a punitive measure, including whipping, beating, or other forms of corporal punishment."@en .
+
+uf:StrafeStrafandrohung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Threat of Punishment in Case of Oath Violation"@en ;
+    rdfs:comment "Warning issued regarding specific penalties for failing to adhere to the terms of an oath."@en .
+
+uf:StrafeAusnahme rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Restrictions and Conditions for the Validity/Application of Punishment"@en ;
+    rdfs:comment "Specifies limitations or prerequisites for the application of a particular punishment."@en .
+
+uf:StrafeMilderung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Circumstances Leading to a Reduced Punishment"@en ;
+    rdfs:comment "Conditions under which the severity of a prescribed punishment may be lessened."@en .
+
+uf:StrafeStrafumwandlung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Conversion of One Type of Punishment to Another"@en ;
+    rdfs:comment "Legal process allowing for the substitution of one form of punishment with another, typically less severe, option."@en .
+
+uf:StrafeUrteilohneStrafe rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Judgment that Includes No Punishment"@en ;
+    rdfs:comment "Legal outcome where a judgment is rendered without the imposition of a penalty."@en .
+
+uf:StrafeVerbot rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Various Prohibitions"@en ;
+    rdfs:comment "Covers a range of legal prohibitions imposed as punitive measures, from activity restrictions to specific bans."@en .
+
+uf:StrafeVerbotSpiel rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Ban on Unlawful Gambling"@en ;
+    rdfs:comment "Prohibition against participating in illegal gambling activities as a punitive measure."@en .
+
+uf:StrafeVerbotTanz rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Dance Ban"@en ;
+    rdfs:comment "Legal restriction on dancing, often issued in specific contexts or as a broad social regulation."@en .
+
+uf:StrafeVerbotWaffen rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Weapons Carrying Ban"@en ;
+    rdfs:comment "Prohibition against the carrying or possession of weapons, typically as a condition of punishment or legal restriction."@en .
+
+uf:StrafeVerbotWirtshaus rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Tavern Visit Ban"@en ;
+    rdfs:comment "Punitive measure restricting an individual's right to visit taverns or similar establishments."@en .
+
+uf:StrafeWeisungananderesGericht rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Directive to Refer the Case to Another Court"@en ;
+    rdfs:comment "Instruction for a legal case to be transferred to a different court for further handling or judgment."@en .
+
+uf:StrafeWiedergutmachung rdf:type rdfs:Class ;
+    rdfs:subClassOf uf:Punishment ;
+    rdfs:label "Making Amends to the Victim"@en ;
+    rdfs:comment "Requirement for the offender to compensate or otherwise make restitution to the victim of their crime."@en .
+
+
